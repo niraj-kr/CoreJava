@@ -1,0 +1,80 @@
+//Singleton class
+  
+  if several people have same requirement then it not recommended to create seperate object for requirement.
+  we have to create only one object and we can reuse smae object for every similar requirement so that performance and memory utilization will be improved.
+  
+  This is central idea of singleton classes
+  
+		Runtime r1 = Runtime.getRuntime();
+		
+		Runtime r2 = Runtime.getRuntime();
+		.
+		.
+		.
+		Runtime r..n = Runtime.getRuntime();
+		
+		r1 r2 r..n pointing to the same object due to same requirement(i.e, it is singelton class)
+		
+	How to create our own singleton classess ?
+		Approach 1. : 
+		class Test{
+			private static Test t = new Test();
+			
+			private Test(){
+				
+			}
+			public static Test getTest(){
+				return t;
+			}
+		}
+		
+		Test t1 = Test.getTest();//thest all are pointing to a single object.
+		Test t2 = Test.getTest();
+		.
+		.
+		Test t..n = Test.getTest();
+		
+		we can create our own singleton classes for this we have to use private constructor and private static variable 
+		and public factory method
+		
+		Note: Runtime class is internally implemented by using this approach.
+		
+		Approach 2. :
+		class Test{
+			private static Test t = null;
+			private Test(){
+			
+			}
+			public static Test getTest(){
+				if(t==null){
+					t = new Test();
+				}
+				return t;
+			}
+		}
+		
+		Test t1 = Test.getTest();//thest all are pointing to a single object.
+		Test t2 = Test.getTest();
+		.
+		.
+		Test t..n = Test.getTest();
+		
+		At any point of time for test class we can create only one object hence Test class is singleton class
+		
+		class is not final but we are not allowed to create child classes how it is possible?
+		
+		class P{
+			private P(){
+			
+			}
+		}
+		
+		for the above class it is impossible to create child class.
+		 but if we are trying to create one then you compile time error.
+		class C extends P{
+			C(){
+				super();//it will invoke p constructor but that is not  possible due to private keyword.
+			}//so we can't create child class.
+		}
+		
+		By declaring every constructor as private we can restrict child class creation.

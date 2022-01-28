@@ -1,0 +1,15 @@
+//BufferedWriter : we can use bufferedwriter to write char data to the file
+//Constructors :
+
+//which of the following are valid
+//BufferedWriter bw = new BufferedWriter("abc.txt"); not valid
+//Bufferedwriter bw = new BufferedWriter(new File("abc.txt")); not valid
+//BufferedWriter bw = new BufferedWriter(new FileWriter("abc.txt")); valid
+//BufferedWriter bw = new BufferedWriter(new BufferedWriter(new FileWriter("abc.txt"))); valid and this is two-level buffering
+->when compared with filewriter which of the followiing capability availaible extra in method form in bufferedwriter
+//write(int ch);
+//write(char[] ch);
+//write(String s);
+//flush()
+//close()
+//newLine() //inserting a new line character this one is the new one that is added to bufferedwriter

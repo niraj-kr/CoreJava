@@ -1,0 +1,32 @@
+PrintWriter : it is most enhanced writer to write char data to the file.
+				the main advantage of printwriter over Filwriter and bufferedwriter is we can write any type of primitive data directly to the file
+Constructor : 
+			PrintWriter pw = new PrintWriter(String fname);
+			PrintWriter pw = new PrintWriter(File f);
+			PrintWriter pw = new PrintWriter(writer s);
+	Note: PrintWriter can communicate directly with the file and can communicate via some writer object also
+
+Methods : 
+		Write(int ch)
+		Write(String s)
+		Write(char[] ch)
+		flush()
+		close()
+		================
+		print(char ch)
+		print(double d)
+		print(int i)
+		print(boolean b)
+		print(String s)
+		
+		=================
+		println(char ch)
+		println(int i)
+		println(double d)
+		println(boolean b)
+		println(String s)
+		
+		
+		
+	
+									   

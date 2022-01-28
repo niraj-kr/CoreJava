@@ -1,0 +1,29 @@
+//public final Class getClass()
+//by using this Class class object we can access class level properties like fully qualified name of the class , method info, constructor info etc.
+/*
+	import java.lang.relect.*;
+	class Test{
+		public static void main(String[] args){
+			int count = 0;
+			Object o = new String("druga");
+			Class c = o.getClass();
+			System.out.println("Fully qualified name of class: "+ c.getName());
+			Method[] m = c.getDeclaredMethods();
+			System.out.println("Methods information:");
+			for(Method m1:m){
+				count++;
+				System.out.prinltn(m1.getName());
+			}
+			System.out.println("The number of methods "+ count);
+		}
+	}
+*/
+//to display database vendor specific connection interface implemented class name
+/*
+	Connection con = DriverManager.getConnection();
+	System.out.println(con.getClass().getName());
+
+	NOTE: 1. After loading every .class file jvm will create an object of the type java.lang.Class in the heap area
+		programmer can use this class object to get class level information 
+		2. We can use get class method very frequently in reflection api.
+*/

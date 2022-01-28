@@ -1,0 +1,45 @@
+											String, StringBuffer & StringBuilder for Java Certification 
+										=================================================================
+										
+
+	Mutability vs Immutability :
+	============================
+				case 1 :
+					String :																		StringBuffer :
+								
+						String s = new String("durga");									StringBuffer sb = new StringBuffer("durga");
+						s.concat("software");											sb.append("software");
+						System.out.println(s);//durga									System.out.println(sb);//durgasoft
+						
+		=>String is immutable .															=>String buffer is mutable . thats it can modify its object
+		so s is pointing to only durga.															and here append method modifies the same object .
+		and after using concat method it will create another object to store
+		durgasoft.
+										
+										
+	== operator vs equals() method :
+	===============================
+										
+				case 2 :
+					String s1 = new String("durga");									StringBuffer sb1 = new StringBuffer("durga");
+					String s2 = new String("durga");									StringBuffer sb2 = new StringBuffer("durga");
+					System.out.println(s1==s2);//false									System.out.println(sb1==sb2);//false					
+					System.out.println(s1.equals(s2));//true							System.out.println(sb1.equals(sb2));//false				
+										
+			=>Both method are used referencd camparision.
+					In the case of string .equals() method is overriden thats why it compares content of both objects
+					but in case of StringBuffer .equals method is not overriden thats why it compares refernces.
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										

@@ -1,0 +1,24 @@
+class Doubt{
+	int x = 10;
+	
+	public static void main(String[] args){
+		//I cant access x without creating object because x is an instance variable which means it can get memory only when object will be created
+		//System.out.println(x);
+		
+		Doubt d = new Doubt();
+		// now memory is allocted to x variable so now u can access
+		System.out.println(d.x);
+		//but cant access directly by using variable name inside static method
+		//x variable is instance variable which means its value vary from object to object
+		//let say we create two objects
+		// Doubt g = new Doubt();
+		//Doubt h = new Doubt();
+		
+		so now if we print directly whats happens 
+		System.out.println(x);
+		it get confuse which value of "x" to choose form g or h 
+		thats we have to use reference to access the variable.
+		
+	}
+	
+}

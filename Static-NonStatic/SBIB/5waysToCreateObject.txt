@@ -1,0 +1,29 @@
+//In how many ways we can create an object or
+//In how many ways we can get object in java
+
+/*01 : by using new operator
+	
+		Test t = new Test();
+
+02 : by using newInstance() method
+
+			Test t = (Test)Class.forName("Test").newInstance();
+			
+03 : by using Factory method
+
+		Runtime r = Runtime.getRuntime();
+		
+		DateFormat df = DateFormat.getInstance();
+		
+04 : by using clone() method
+
+		Test t1 = new Test();
+		Test t2 = (Test)t1.clone();
+		
+05 : by using Deserialization
+
+		FileInputStream fis = new FileInputStream("abc.ser");
+		ObjectInputStream ois = new ObjectInputStream(fis);
+		Dog d = (Dog)ois.readObject(); 
+		
+*/
